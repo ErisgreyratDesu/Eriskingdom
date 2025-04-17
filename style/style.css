@@ -168,7 +168,6 @@ main {
 }
 .wrapper_main > .inforSelf > h1 > span:nth-of-type(2):hover {
     transform: scale(1.01) translateY(-0.3em);
-    -webkit-text-stroke: 1px black;
   }
   .wrapper_main > .inforSelf > h1 > span:nth-of-type(1):hover {
     transform: scale(1.01) translateY(-0.3em);
