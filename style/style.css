@@ -34,9 +34,9 @@ header {
     background-color: rgba(0, 0, 0, 0.241);
     border-radius: 25px;
     padding:0 1em 0 1em;
+    z-index: 10;
 }
 header > .logo {
-    position: relative;
     font-size: 3em;
     font-weight: 600;
     font-family: 'Montserrat',sans-serif;
@@ -124,6 +124,43 @@ header > button:hover::after{
     width: 100%;
     transform: scale(1.5);
 }
+.wrapper_dropdown:hover > .dropdown{
+    display: block;
+}
+.wrapper_dropdown > a > span {
+    transition: all 0.5s;
+}
+.wrapper_dropdown:hover > a > span {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+.dropdown {
+    display: none;
+    margin-top: .4em;
+    padding: .5em .4em;
+    list-style: none; 
+    border-radius: 12px;
+    position: absolute;
+    z-index: 11;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+}
+.dropdown > a {
+    font-family: 'Montserrat',sans-serif;
+    display: block;
+    color:#ffffff;
+    padding:.3em;
+    text-decoration: none;
+    border-radius: inherit;
+}
+.dropdown > a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #00f0ff;
+    transform: scale(1.03);
+}
+/* -----------------------------MAIN------------------------------------------ */
 main {
     display: flex;
     justify-content: center;
@@ -266,8 +303,8 @@ main {
     border: 1px solid white;
     border-radius: 25px;
     font-size: 1rem;
-    width: 60%;
-    height: 60%;
+    width: 50%;
+    height: 50%;
     align-self: center;
     justify-self: center;
     transition: all 0.5s;
@@ -404,7 +441,7 @@ main {
     font-weight: bold;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(2);
+    transform: translate(-50%, -50%) scale(1.5);
     opacity: 1;
     transition: all 0.5s;
     color: white;
@@ -515,7 +552,7 @@ transition: all 1s;
     background-position: 0% 0;
 }
 .footer_horLine { 
-    width: 45%;
+    width: 60%;
     grid-column: 1 / 3;
     background-color: grey;
     height: 2px;
@@ -544,6 +581,13 @@ transition: all 1s;
     }
 }
 @media (max-width:860px) {
+    .profile {
+        width: 70%;
+        height: 60%;
+    }
+    body,html {
+        max-width: 860px;
+    }
     header > .logo {
         font-size: 1.5em;
     }
@@ -555,6 +599,14 @@ transition: all 1s;
     }
 }
 @media (max-width:560px) {
+
+    .wrapper_general {
+        max-width: 560px;
+    }
+    .profile {
+        width: 70%;
+        height: 30%;
+    }
     header > .logo {
         font-size: 1em;
     }
