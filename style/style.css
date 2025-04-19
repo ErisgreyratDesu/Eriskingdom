@@ -245,10 +245,10 @@ main {
     border: none;
     -webkit-box-reflect: below -3.9em linear-gradient(transparent 20%, rgba(0, 0, 0, 0.35));
     background-size: cover;
-    background-position:calc(50% + -1em) calc(50% + -2em);
+    background-position:calc(50% + .3em) calc(50% + -1em);
     grid-column: 3 / 4;
     grid-row: 1 / 4;
-    border-radius: 25px;
+    border-radius: 60px;
     transition: all 1s;
     width: 70%;
     height: 100%;
