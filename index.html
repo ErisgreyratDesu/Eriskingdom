@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/Logo_Trường_Đại_học_FPT.svg.png">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
     <title>Portfolio</title>
 </head>
 <body>
@@ -37,24 +37,50 @@
         <main>
             <div class="wrapper_main">
                 <div class ="inforSelf">
-                    <h1><span>お早う,</span><span> タインです。</span></h1>
+                    <h1><span>I'm,</span><span>Trung Thang</span></h1>
                     <div class="h2_container">
                         <h2>はじめまして！</h2>
                         <h2>I'm future Full-stack developer!</h2>
                     </div>
                 </div>
-                <div class="profile"></div>
-                <button class="button button1">
-                    <span><i class="fa-solid fa-plane"></i></span>
-                    <span>Plane</span>
+                <div class="profile">
+                </div>
+                <button class="button button1" id="buttonM_hover">
+                    <span id="plane"><i class="fa-solid fa-plane"></i></span>
+                    <div class="cloud cloud1"><i class="fa-solid fa-cloud"></i></div>
+                    <div class="cloud cloud2"><i class="fa-solid fa-cloud"></i></div>
+                    <div class="cloud cloud3"><i class="fa-solid fa-cloud"></i></div>
+                    <span id="textPlane">Plane</span>
+                    <span id="textWelcome">Welcome</span>
                 </button>
                 <button class="button button2">Source</button>
                 <button class="button button3">Co-op</button>
             </div>
         </main>
-        <footer></footer>
-        <main></main>
-        <footer></footer>
+        <footer>
+        <div class="footer">
+            <div class="footer_text">THE COPY'S RIGHT</div>
+            <div class="footer_horLine"></div>
+            <div class="footer_link">
+                <div class="footer_link_container">
+                    <div class="footer_btn" title="Facebook"> <i class="fa-brands fa-facebook"></i> </div>
+                    <div class="footer_btn" title="Github"> <i class="fa-brands fa-github"></i> </div>
+                    <div class="footer_btn" title="X-Twitter"> <i class="fa-brands fa-x-twitter"></i ></div>
+                </div>
+            </div>
+        </div>
+        </footer>
+        <script>
+            const Plane = document.getElementById("plane");
+            const TextWelcome = document.getElementById("textWelcome");
+            const isHover = document.getElementById("buttonM_hover");
+            Plane.addEventListener("animationend", () => {
+                TextWelcome.classList.add("appeared");
+            });
+            isHover.addEventListener("mouseout",()=> {
+                TextWelcome.classList.remove("appeared");
+            });
+        </script>
     </div>
 </body>
 </html>
